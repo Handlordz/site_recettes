@@ -1,0 +1,156 @@
+/* l'asterisque permert de sélectionner toute la page HTML - Overflow permet d'éviter le débordement des data dans le conteneur.*/
+* {
+    overflow: auto;
+}
+
+body {
+    background-color: #8ba1bb;  /* Couleur hexadécimale*/
+    font-family: Arial;
+}
+
+div.contenu {
+    background-color: white;                
+    margin: 60px 10% 80px 10%;  /* Marge par-rapport à la fenêtre haut - droite - bas - gauche */
+    padding: 0px 30px 30px 30px;  /* Marge pour le texte à l'intérieur du div */
+    min-width: 350px; 
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+}
+h1 {    /* S'appliquera à tous les h1*/
+    text-align: center;
+    margin-bottom: 12px; 
+    margin-top: 10px;
+}
+
+p.description { /* S'appliquera à tous les paragraphes avec la class description*/
+    text-align: center;
+    max-width: 400px;   /* Permet de limiter la largeur du texte afin qu'il reste toujours sur deux lignes */
+    display: inline-block;  /* Display est une propriété qui définit le type d'affichage*/
+    font-size: 16px;
+}
+
+p.categorie {
+    background-color: black;
+    color: white;
+    display: inline-block;   
+    margin-top: 0px;
+    padding: 8px 18px;                
+    margin-bottom: 0px;
+    margin-top: -15px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.centre {
+    text-align: center;
+    width: 100%;
+}
+
+div.categorie {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    overflow: visible;
+}
+
+div.separateur {
+    height: 1px;
+    width: 100px;
+    background-color: black;
+    margin-left: auto;  /* Le paramètre auto permet de prendre toute la place disponible à gauche (aligné donc à droite) */
+    margin-right: auto; /* Le paramètre auto permet de prendre toute la place disponible à droite (donc centré après 
+    application de margin left) */
+} 
+
+div.info {
+    position: relative;
+}          
+
+table.info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background-color: #6C829D;
+    opacity: 0.8;
+    height: 80px;
+} 
+
+table.info td {
+    text-align: center;
+    font-size: 14px;
+    vertical-align: top;                
+}
+
+table.info th {                
+    font-size: 16px;
+    vertical-align: bottom;
+    padding-bottom: 8px;
+}
+
+img.info {
+    display: block;
+    max-height: 400px;
+    object-fit: cover;
+    min-height: 200px;
+    background-color: lightgray;
+}
+
+div.colonne {
+    width: 45%; /* largeur à 45% pour une colonne soit 90% pour les deux colonnes
+                         10% restant pour la marge permettant la séparation des deux colonnes (voir ci-dessous) */
+    margin-top: 20px;
+}
+
+div.colonne h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-bottom: 5px solid #6C829D;
+    padding-bottom: 5px;
+}
+
+div.colonne1{
+    display: inline-block;
+    margin-right: 10%;
+}
+
+div.colonne2 {
+    float: right;
+}
+
+div.ingredients p {
+    text-align: center;
+    font-size: 14px;
+    border: lightgray solid 1px;
+    padding: 8px 0;
+    margin-top: 4px;    
+    margin-bottom: 0;
+}
+
+table.preparation p.numero {
+    background-color: #6C829D;
+    color: white;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 4px;
+    box-sizing: border-box; /*Permet d'ajuster le padding à l'interieur de la cellule de la table sans dimensinner la cellule également.*/
+    border-radius: 50%;
+    margin:0;
+}
+
+table.preparation td {
+    vertical-align: top;    
+}
+
+table.preparation td.preparation-etape {
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+table.preparation tr {
+    height: 40px;    
+}
