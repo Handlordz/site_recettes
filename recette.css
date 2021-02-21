@@ -6,14 +6,14 @@
 body {
     background-color: #8ba1bb;  /* Couleur hexadécimale*/
     font-family: Arial;
+    margin: 0;
 }
 
 div.contenu {
     background-color: white;                
-    margin: 60px 10% 80px 10%;  /* Marge par-rapport à la fenêtre haut - droite - bas - gauche */
-    padding: 0px 30px 30px 30px;  /* Marge pour le texte à l'intérieur du div */
-    min-width: 350px; 
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px 8px 40px 8px;  /* Marge par-rapport à la fenêtre haut - droite - bas - gauche */
+    padding: 0px 8px 20px 8px;  /* Marge pour le texte à l'intérieur du div */
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1);
     overflow: visible;
 }
 h1 {    /* S'appliquera à tous les h1*/
@@ -72,17 +72,17 @@ table.info {
     color: white;
     background-color: #6C829D;
     opacity: 0.8;
-    height: 80px;
+    height: 50px;
 } 
 
 table.info td {
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     vertical-align: top;                
 }
 
 table.info th {                
-    font-size: 16px;
+    font-size: 14px;
     vertical-align: bottom;
     padding-bottom: 8px;
 }
@@ -96,8 +96,7 @@ img.info {
 }
 
 div.colonne {
-    width: 45%; /* largeur à 45% pour une colonne soit 90% pour les deux colonnes
-                         10% restant pour la marge permettant la séparation des deux colonnes (voir ci-dessous) */
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -110,8 +109,7 @@ div.colonne h2 {
 }
 
 div.colonne1{
-    display: inline-block;
-    margin-right: 10%;
+    display: inline-block;   
 }
 
 div.colonne2 {
@@ -154,3 +152,43 @@ table.preparation td.preparation-etape {
 table.preparation tr {
     height: 40px;    
 }
+
+/*  Styles pour ordinateur. */
+@media only screen and (min-width: 768px) {
+    div.contenu {                
+        margin: 60px 10% 80px 10%;  /* Marge par-rapport à la fenêtre haut - droite - bas - gauche */
+        padding: 0px 30px 30px 30px;  /* Marge pour le texte à l'intérieur du div */    
+        min-width: 350px;
+    }
+    table.info {
+        height: 80px;
+    } 
+
+    table.info td {
+        font-size: 14px;        
+    }
+    
+    table.info th {                
+        font-size: 16px;        
+    }
+    div.colonne {
+        width: 45%; /* largeur à 45% pour une colonne soit 90% pour les deux colonnes
+                             10% restant pour la marge permettant la séparation des deux colonnes (voir ci-dessous) */       
+    }   
+    
+    div.colonne1{     
+        margin-right: 10%;
+    }
+    
+    div.colonne2 {
+        float: right;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    div.contenu {                
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 645px;
+    }
+  }
